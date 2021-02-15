@@ -206,4 +206,8 @@ footer {
   .btn {
     padding: 10px 20px;
   }
+
+  .intro {
+    text-align: left;
+  }
 }
