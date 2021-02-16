@@ -7,68 +7,69 @@
     <title>Charles Pitagan - Portfolio</title>
 
     <link rel="shortcut icon" type="image/png" href="img/logo.png"/>
-
+    <script src="https://unpkg.com/vue@3.0.2"></script>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 <body>
     
-    <header class="bg-img">
-        <div class="container">
-            <div class="header">
-                <p class="logo" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="100">FutureSrDeveloper</p>
-                <ul class="contacts" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="100">
-                    <li>
-                        <i class="fa fa-phone" aria-hidden="true"> 09756348605</i>
-                    </li>
-                    <li>
-                        <i class="fa fa-google" aria-hidden="true"> cvpitagan@gmail.com</i>
-                    </li>
-                    <li>
-                        <a href="https://www.facebook.com/quarts14">
-                            <i class="fa fa-facebook" aria-hidden="true"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://www.linkedin.com/in/charles-pitagan-28818a190/">
-                            <i class="fa fa-linkedin" aria-hidden="true"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://github.com/Vincexx">
-                            <i class="fa fa-github" aria-hidden="true"></i>
-                        </a>
-                    </li>
-                </ul>
-            </div>
+    <div id="app">
+        <header class="bg-img nav">
+            <div class="container">
+                <div class="header">
+                    <p class="logo" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="100">FutureSrDeveloper</p>
+                    <ul class="contacts" :class="{ 'active-contacts' : showMenu }">
+                        
+                        <li><a href="#app">Home</a></li>
 
-            <div class="showcase">
-                <div class="split">
-                    <div class="intro">
-                        <p data-aos="fade-right" data-aos-duration="1000" data-aos-delay="100">HI, MY NAME IS</p>
-                        <h1 data-aos="fade-left" data-aos-duration="1000" data-aos-delay="100">Charles Vincent Pitagan</h1>
-                        <img src="img/line-name.png" alt="line-name" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="100">
-                        <p data-aos="fade-left" data-aos-duration="1000" data-aos-delay="100">"The expert in anything was once a beginner."</p>
-                        <div class="buttons">
-                            <a class="btn" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="100" href="docs/CV.pdf" target="__blank">View CV</a>
-                            <a class="btn" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100" href="#about-skills">Learn More</a>
-                        </div>
+                        <li><a href="#about-skills">About</a></li>
+                        
+                        <li><a href="#projects">Projects</a></li>
+    
+                        <li><a href="">Contacts</a></li>
+                        
+                        
+                    </ul>
+    
+                    <div class="burger">
+                        <button class="btn-menu" @click='showMenus()' v-show="showMenu"><img src="img/burger.png" alt=""></button>
+                        <button class="btn-menu" @click='showMenus()' v-show="!showMenu"><img src="img/black-burger.png" alt=""></button>
                     </div>
-                    <div class="profile" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="100">
-                        <img src="img/profile.png" alt="">
+
+                </div>
+    
+               
+    
+            </div>
+    
+            
+        </header>
+    </div>
+
+    <div class="container">
+        <div class="showcase">
+            <div class="split">
+                <div class="intro">
+                    <p data-aos="fade-right" data-aos-duration="1000" data-aos-delay="100">HI, MY NAME IS</p>
+                    <h1 data-aos="fade-left" data-aos-duration="1000" data-aos-delay="100">Charles Vincent Pitagan</h1>
+                    <img src="img/line-name.png" alt="line-name" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="100">
+                    <p data-aos="fade-left" data-aos-duration="1000" data-aos-delay="100">"The expert in anything was once a beginner."</p>
+                    <div class="buttons">
+                        <a class="btn" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="100" href="docs/CV.pdf" target="__blank">View CV</a>
+                        <a class="btn" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100" href="#about-skills">Learn More</a>
                     </div>
                 </div>
+                <div class="profile" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="100">
+                    <img src="img/profile.png" alt="">
+                </div>
             </div>
-
         </div>
-
-        
-    </header>
+    </div>
 
     
 
-    <section id="about-skills">
+    <section id="about-skills" class="bg-img">
         <div class="container">
             <div class="split">
                 <div class="line" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="100">
@@ -108,7 +109,7 @@
         </div>
     </section>
 
-    <section class="projects bg-img">
+    <section id="projects">
         <div class="container">
             <div class="title" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="100">
                 <h1>Projects</h1>
@@ -210,5 +211,7 @@
 
     </script>
 
+    <script src="js/app.js"></script>
+ 
 </body>
 </html>
