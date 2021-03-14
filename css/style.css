@@ -48,6 +48,16 @@ h3 {
   margin: 1em 0;
 }
 
+.sub-link {
+  color: #414141;
+}
+
+.sub-link:hover {
+  color: rgb(0, 0, 0);
+  border-bottom: 1px solid rgb(0, 0, 0);
+  transition: all 1s ease-in;
+}
+
 li,
 p {
   color: var(--secondary-color);
@@ -55,9 +65,9 @@ p {
   margin: 0;
 }
 
-.fa {
+/* .fa {
   color: var(--primary-color);
-}
+} */
 
 img {
   max-width: 100%;
@@ -128,6 +138,15 @@ a {
 
 .contacts li {
   margin: 3em 0;
+  padding: 10px 0;
+}
+
+.contacts li:hover {
+  background: var(--secondary-color);
+}
+
+.contacts li:hover a {
+  color: rgb(177, 177, 177);
 }
 
 section {
@@ -203,7 +222,7 @@ h1 {
   color: rgb(255, 255, 255);
 }
 
-.contacts1 li {
+/* .contacts1 li {
   margin: 1em 0;
 }
 
@@ -214,6 +233,17 @@ h1 {
 
 .title-contact {
   border-right: 0.1px solid var(--secondary-color);
+} */
+
+footer ul {
+  margin: 0;
+  padding: 0;
+  margin: 10px 0;
+}
+
+footer li {
+  display: inline;
+  margin: 0 10px;
 }
 
 footer {
